@@ -35,3 +35,39 @@ nav {
 .nav-links a:hover {
     color: gray;
 }
+
+/* Hamburger Menu (Hidden on Large Screens) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: burgundy;
+        width: 200px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        display: block;
+    }
+}
